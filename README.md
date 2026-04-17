@@ -115,7 +115,7 @@ imageforge/
 
 ```bash
 git clone https://github.com/mayanksingh-ai1/-Binaire_Assign.git
-cd imageforge
+cd -Binaire_Assign
 ```
 
 ---
