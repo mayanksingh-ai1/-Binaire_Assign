@@ -114,7 +114,7 @@ imageforge/
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/your-username/imageforge.git
+git clone https://github.com/mayanksingh-ai1/-Binaire_Assign.git
 cd imageforge
 ```
 
@@ -134,50 +134,7 @@ npm install
 npm run dev
 ```
 
-👉 This will start:
-
-* React frontend (Vite)
-* Electron app window
-
----
-
-## 🧱 Build for Production
-
-### Step 1: Build Frontend
-
-```bash
-npm run build
-```
-
-### Step 2: Create Windows Executable (.exe)
-
-```bash
-npx electron-builder
-```
-
-👉 Output:
-
-```
-dist/
- └── ImageForge Setup.exe
-```
 
 
-
-## 👨‍💻 Author
-
-**Mayank Singh**
-B.Tech CSE | MERN Stack Developer
-
----
-
-## 📧 Submission Details
-
-* ✔️ Complete working project
-* ✔️ Compiled `.exe` binary
-* ✔️ GitHub repository
-* ✔️ Demo video
-
----
 
 
