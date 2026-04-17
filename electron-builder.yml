@@ -1,0 +1,39 @@
+appId: com.binaire.imageforge
+productName: ImageForge
+copyright: Copyright © 2024 Binaire Private Limited
+
+directories:
+  output: dist-electron
+  buildResources: assets
+
+files:
+  - dist/**/*
+  - electron/**/*
+  - assets/**/*
+  - package.json
+
+extraResources:
+  - from: public/opencv.js
+    to: opencv.js
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: assets/icon.ico
+  requestedExecutionLevel: asInvoker
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: ImageForge
+  installerIcon: assets/icon.ico
+  uninstallerIcon: assets/icon.ico
+
+asar: true
+asarUnpack:
+  - "**/*.node"

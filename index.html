@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" 
+content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob:;
+connect-src 'self' data: blob:;
+img-src 'self' data: blob:;
+script-src 'self' 'unsafe-eval' 'unsafe-inline';
+style-src 'self' 'unsafe-inline';">
+    <title>ImageForge</title>
+    <link rel="icon" type="image/x-icon" href="./assets/icon.ico" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <!--
+      OpenCV.js is optional — HDR merge now uses pure JS pixel math.
+      If you have public/opencv.js it will load for any extra cv ops.
+    -->
+    <script>
+      // Silently try to load opencv.js; failure is non-fatal
+      (function() {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = './opencv.js';
+        s.onload = function() { window.dispatchEvent(new Event('opencv-loaded')); };
+        s.onerror = function() { console.info('opencv.js not found — HDR uses pure-JS fallback.'); };
+        document.head.appendChild(s);
+      })();
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
