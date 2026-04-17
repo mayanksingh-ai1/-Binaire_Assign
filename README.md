@@ -1,4 +1,5 @@
 # 🖼️ ImageForge - Image Processing Tool (Electron App)
+## Exe file: https://drive.google.com/file/d/1rNfjncEEHCgZ-amPpHscsMuDHfQWjFyL/view?usp=sharing
 
 ## 🚀 Overview
 
